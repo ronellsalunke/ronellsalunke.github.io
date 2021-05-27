@@ -1,6 +1,6 @@
 :root {
   background: #272727;
-  font-family: 'Jetbrains Mono';
+  font-family: 'Jetbrains Mono', monospace;
   margin: 60px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
