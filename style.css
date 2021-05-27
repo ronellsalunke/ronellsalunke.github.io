@@ -1,0 +1,33 @@
+:root {
+  background: #272727;
+  font-family: 'Jetbrains Mono';
+  margin: 60px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  color: aliceblue;
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+  color: bisque;
+}
+
+li {
+  color: white;
+}
+
+a {
+  color: cornflowerblue;
+}
+
+a:hover {
+  color: coral;
+}
+
+
+
+
