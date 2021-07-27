@@ -28,6 +28,19 @@ a:hover {
   color: coral;
 }
 
+img {
+  border-radius: 50%;
+}
 
+.title{
+  display: flex;
+  flex-flow: wrap;
+  padding: 15px;
+  margin: auto;
+}
 
+.title-item {
+  padding: 15px;
+  text-align: center;
+}
 
