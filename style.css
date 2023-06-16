@@ -12,7 +12,7 @@ h1 {
   color: white;
 }
 
-h3 {
+h2 {
   color: bisque;
 }
 
@@ -21,22 +21,32 @@ li {
 }
 
 a {
-  color: cornflowerblue;
+  color: white;
 }
 
 a:hover {
   color: coral;
 }
 
+.center {
+  align-items: center;
+  align-content: center;
+}
+
 img {
   border-radius: 50%;
+  max-width: 100%;
+  display: block;
+  align-content: center;
 }
 
 .title{
-  display: flex;
-  flex-flow: wrap;
   padding: 15px;
   margin: auto;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+
 }
 
 .title-item {
@@ -44,3 +54,8 @@ img {
   text-align: center;
 }
 
+.body-item {
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
