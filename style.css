@@ -45,7 +45,7 @@ img {
   margin: auto;
   display: flex;
   flex-flow: wrap;
-
+  text-align: center;
   justify-content: center;
 
 }
