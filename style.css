@@ -40,14 +40,16 @@ img {
   align-content: center;
 }
 
-.title{
+.title {
   padding: 15px;
   margin: auto;
   display: flex;
   flex-flow: wrap;
-  align-items: center;
+
+  justify-content: center;
 
 }
+
 
 .title-item {
   padding: 15px;
