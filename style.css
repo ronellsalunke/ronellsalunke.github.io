@@ -1,115 +1,115 @@
 body {
-  margin: 60px auto;
-  width: 580px;
-  font-family: 'Atkinson Hyperlegible Next';
-  font-size: 16px;
-  background-color: #262427;
-  color: #fcfcfa;
+    margin: 60px auto;
+    width: 580px;
+    font-family: "Atkinson Hyperlegible Next";
+    font-size: 16px;
+    background-color: #262427;
+    color: #fcfcfa;
 }
 
 h1 {
-  color: #fcfcfa;
-  font-size: 38px;
-  line-height: 42px;
-  font-weight: normal;
-  margin-bottom: 20px;
+    color: #fcfcfa;
+    font-size: 38px;
+    line-height: 42px;
+    font-weight: normal;
+    margin-bottom: 20px;
 }
 
 h2 {
-  color: #ffca58;
-  margin-top: 40px;
-  margin-bottom: 5px;
-  font-size: 24px;
-  font-weight: normal;
+    color: #ffca58;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: normal;
 }
 
 header {
-  display: flex;
-  flex-flow: wrap;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  justify-content: center;
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 header p {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 li {
-  color: #f5f5f5;
+    color: #f5f5f5;
 }
 
 a {
-  color: #49cae4;
+    color: #49cae4;
 }
 
 a:hover {
-  color: #aee8f4;
+    color: #aee8f4;
 }
 
 a:visited {
-  color: #a093e2
+    color: #a093e2;
 }
 
 p {
-  margin: 0 0 2ex 0;
+    margin: 0 0 2ex 0;
 }
 
 ul {
-  margin: 0 0 2ex 0;
-  padding: 0;
+    margin: 0 0 2ex 0;
+    padding: 0;
 }
 
 li {
-  margin: 0 0 0 20px;
-  padding: 0;
+    margin: 0 0 0 20px;
+    padding: 0;
 }
 
 li a {
-  color: #ff8787;
+    color: #ff8787;
 }
 
 img {
-  background-size: 100%;
-  display: block;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 100px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  width: 80px;
-  margin-right: 15px;
+    background-size: 100%;
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    width: 80px;
+    margin-right: 15px;
 }
 
 pre {
-  font-size: 15px;
-  white-space: pre;
-  word-wrap: normal;
-  overflow: auto;
-  width: auto;
+    font-size: 15px;
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+    width: auto;
 }
 
 @media screen and (max-width: 580px) {
-  body {
-    margin: 10px auto;
-    padding: 0 20px 0 20px;
-    width: auto;
-    word-wrap: break-word;
-  }
+    body {
+        margin: 10px auto;
+        padding: 0 20px 0 20px;
+        width: auto;
+        word-wrap: break-word;
+    }
 
-  pre {
-    font-size: 14px;
-    line-height: 16px;
-  }
+    pre {
+        font-size: 14px;
+        line-height: 16px;
+    }
 
-  img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-  }
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
 
-  img.avatar {
-    height: 110px;
-    width: 110px;
-  }
+    img.avatar {
+        height: 110px;
+        width: 110px;
+    }
 }
