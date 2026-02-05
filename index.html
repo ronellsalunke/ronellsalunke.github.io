@@ -1,98 +1,144 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap"
-            rel="stylesheet"
-        />
 
-        <link rel="stylesheet" href="style.css" type="text/css" />
-        <title>Ronell's site</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
 
-    <body>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Ronell's site</title>
+</head>
+
+<body>
+    <!-- Hidden toggle checkbox -->
+    <input type="checkbox" id="theme-toggle" />
+
+    <div class="container">
         <header>
-            <img
-                src="https://avatars.githubusercontent.com/u/37792939"
-                loading="lazy"
-                width="150"
-                height="150"
-                class="avatar"
-            />
-            <h1>RONELL SALUNKE</h1>
+            <div class="header-content">
+                <img src="https://avatars.githubusercontent.com/u/37792939" loading="lazy" width="150" height="150"
+                    class="avatar" alt="Ronell Salunke" />
+                <div>
+                    <h1>RONELL SALUNKE</h1>
+                </div>
+            </div>
+
+            <label for="theme-toggle" class="theme-btn" aria-label="Toggle Theme"></label>
         </header>
-        <article>
-            <p>
-                You can reach me via
-                <a href="mailto:ronell1292k@gmail.com">email</a>, <a href="https://x.com/ronellsalunke">X/Twitter</a>,
-                <a href="https://t.me/ronell1292k">Telegram</a> and
-                <a href="https://www.linkedin.com/in/ronellsalunke/">LinkedIn</a>. All my projects are open source and
-                available on my <a href="https://github.com/ronellsalunke">Github</a>. You can find my CV
-                <a href="./resume.pdf">here</a>. I infrequently blog <a href="blog/">here</a>.
-            </p>
 
-            <h2 id="skills">Skills</h2>
-            <ul class="body_item">
-                <li>Languages: Java, Kotlin, Python, C/C++, HTML/CSS, Go</li>
-                <li>Frameworks: Android SDK, Flutter, Apache Hadoop</li>
-                <li>Data Science & ML: SciKit Learn, TensorFlow, Pandas, NumPy, Matplotlib, Seaborn, OpenCV</li>
-                <li>Databases: Relational (MySQL, SQLite), NoSQL (MongoDB)</li>
-                <li>DevOps & Misc. Tools: Git, Docker, Kubernetes, Swagger, Linux, Jenkins</li>
-            </ul>
+        <main>
+            <section class="intro">
+                <div class="social-icons">
+                    <a href="./resume.pdf" class="social-icon" aria-label="Resume / CV">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:ronell1292k@gmail.com" class="social-icon" aria-label="Email">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20,18H18V9.25L12,13L6,9.25V18H4V6H5.2L12,10.25L18.8,6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/ronellsalunke" class="social-icon" aria-label="GitHub">
 
-            <h2 id="sw">Projects</h2>
-            <ul class="body_item">
-                <li>
-                    <a href="https://github.com/ronellsalunke/flutter_pokedex">FlutterDex</a>
-                    - Flutter client for PokeApi
-                </li>
-                <li>
-                    <a href="https://github.com/ronellsalunke/deepfake-detection-api">Deepfake Detection API</a>
-                    - Dockerized deepfake API with a basic HTML frontend
-                </li>
-                <li>
-                    <a href="https://github.com/ronellsalunke/NoteIt">NoteIt</a>
-                    - Native Android note-taking app
-                </li>
-                <li>
-                    <a href="https://github.com/ronellsalunke/LinkTile">LinkTile</a>
-                    - WearOS tile app displaying my LinkedIn profile URL as a QR code
-                </li>
-                <li>
-                    <a href="https://github.com/ronellsalunke/autoencoder-mnist">Image Classification Autoencoder</a>
-                    - Denoising autoencoder for MNIST handwritten digit classification
-                </li>
-                <li>
-                    <a href="https://github.com/ronellsalunke/invisibility-cloak">Invisibility Cloak</a>
-                    - Masking cloak that uses the on-device webcam for live input
-                </li>
-                <li>
-                    <a href="https://github.com/ronellsalunke/golang-webserver">Golang-Webserver</a>
-                    - A simple HTTP server written in Go
-                </li>
-                <li>
-                    <a href="https://github.com/ronellsalunke/scripts">Scripts</a>
-                    - Linux and Windows shell scripts for setup automation
-                </li>
-            </ul>
-            <h2>Research Publications</h2>
-            <ul>
-                <li>
-                    Prediction Model for Stock using Machine Learning Algorithm -
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10270808">IEEE Explore</a>
-                </li>
-                <li>
-                    CBF-NLP based Hybrid Model for Movie Recommendation System -
-                    <a href="https://link.springer.com/chapter/10.1007/978-981-97-8096-9_21">Springer</a>
-                </li>
-                <li>
-                    Machine Learning—Book Recommendation Using KNN -
-                    <a href="https://link.springer.com/chapter/10.1007/978-981-96-4136-9_7">Springer</a>
-                </li>
-            </ul>
-        </article>
-    </body>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ronellsalunke/" class="social-icon" aria-label="LinkedIn">
+
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/ronell1292k" class="social-icon" aria-label="Telegram">
+
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                        </svg>
+                    </a>
+                    <a href="blog/" class="social-icon" aria-label="Blog">
+
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20S4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="skills">Skills</h2>
+                <ul class="skills-list">
+                    <li class="skill-chip"><strong>Languages:</strong> Java, Kotlin, Python, C/C++, HTML/CSS, Go</li>
+                    <li class="skill-chip"><strong>Frameworks:</strong> Android SDK, Flutter, Apache Hadoop</li>
+                    <li class="skill-chip"><strong>DS & ML:</strong> SciKit Learn, TensorFlow, Pandas, NumPy, OpenCV
+                    </li>
+                    <li class="skill-chip"><strong>Databases:</strong> MySQL, SQLite, MongoDB</li>
+                    <li class="skill-chip"><strong>Tools:</strong> Git, Docker, Kubernetes, Linux, Jenkins</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="sw">Projects</h2>
+                <ul class="projects-grid">
+                    <li class="project-card">
+                        <a href="https://github.com/ronellsalunke/bill_splitter_flutter">Bill Splitter Flutter</a>
+                        <p class="project-description">Flutter app for splitting bills, uses BLoC</p>
+                    </li>
+                    <li class="project-card">
+                        <a href="https://github.com/ronellsalunke/deepfake-detection-api">Deepfake Detection API</a>
+                        <p class="project-description">Dockerized deepfake API with a basic HTML frontend</p>
+                    </li>
+                    <li class="project-card">
+                        <a href="https://github.com/ronellsalunke/LinkTile">LinkTile</a>
+                        <p class="project-description">WearOS tile app displaying my LinkedIn profile URL as a QR code
+                        </p>
+                    </li>
+                    <li class="project-card">
+                        <a href="https://github.com/ronellsalunke/autoencoder-mnist">Autoencoder MNIST</a>
+                        <p class="project-description">Denoising autoencoder for handwritten digits</p>
+                    </li>
+                    <li class="project-card">
+                        <a href="https://github.com/ronellsalunke/invisibility-cloak">Invisibility Cloak</a>
+                        <p class="project-description">Masking cloak using on-device webcam for live input</p>
+                    </li>
+                    <li class="project-card">
+                        <a href="https://github.com/ronellsalunke/golang-webserver">Golang Webserver</a>
+                        <p class="project-description">A simple HTTP server written in Go</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Research Publications</h2>
+                <ul class="pub-list">
+                    <li>
+                        Prediction Model for Stock using Machine Learning Algorithm -
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10270808">IEEE Explore</a>
+                    </li>
+                    <li>
+                        CBF-NLP based Hybrid Model for Movie Recommendation System -
+                        <a href="https://link.springer.com/chapter/10.1007/978-981-97-8096-9_21">Springer</a>
+                    </li>
+                    <li>
+                        Machine Learning—Book Recommendation Using KNN -
+                        <a href="https://link.springer.com/chapter/10.1007/978-981-96-4136-9_7">Springer</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
 </html>
