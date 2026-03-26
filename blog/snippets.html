@@ -1,0 +1,25 @@
+---
+layout: base
+title: Snippets
+permalink: /blog/snippets/
+---
+
+<div class="home">
+    <ul class="post-list">
+        {% for snippet in site.snippets %}
+        <li>
+            {% if snippet.date %}
+            <span class="post-meta">{{ snippet.date | date: "%b %-d, %Y" }}</span>
+            {% endif %}
+
+            <h2>
+                <a class="post-link" href="{{ snippet.url | relative_url }}">{{ snippet.title | escape }}</a>
+            </h2>
+
+            {% if snippet.excerpt %}
+            <p>{{ snippet.excerpt }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>

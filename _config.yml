@@ -60,5 +60,10 @@ minima:
 
 # Permalink structure
 permalink: /blog/:year/:month/:day/:title/
-# url: "https://ksdfg.dev"
+# url: "https://ronellsalunke.github.io"
 # baseurl: ""
+
+collections:
+  snippets:
+    output: true
+
