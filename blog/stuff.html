@@ -1,0 +1,10 @@
+---
+layout: page
+title: Stuff
+permalink: /stuff/
+---
+
+{% assign stuff_doc = site.stuff | where: "slug", "stuff" | first %}
+{% if stuff_doc %}
+{{ stuff_doc.content }}
+{% endif %}

@@ -66,6 +66,11 @@ permalink: /blog/:year/:month/:day/:title/
 # url: "https://ronellsalunke.github.io"
 # baseurl: ""
 
+header_pages:
+  - blog/index.html
+  - blog/snippets.html
+  - blog/stuff.html
+
 collections:
   snippets:
     output: true
