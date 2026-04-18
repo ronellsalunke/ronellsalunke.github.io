@@ -1,0 +1,134 @@
+{
+  "profile": {
+    "initials": "RS",
+    "image": "https://avatars.githubusercontent.com/u/37792939",
+    "name": "Ronell Salunke",
+    "description": "Software Engineer",
+    "website": "ronellsalunke.github.io",
+    "website_url": "https://ronellsalunke.github.io"
+  },
+  "about": "I build stuff.",
+  "work": [
+    {
+      "year": "Feb 2025 - Present",
+      "title": "Consultant at Stetig",
+      "location": "Pune, India",
+      "url": "https://stetig.in"
+    },
+    {
+      "year": "Feb 2024 - Mar 2024",
+      "title": "Software Engineer (Intern) at S2T",
+      "location": "Singapore (Remote)",
+      "url": "https://s2t.ai"
+    },
+    {
+      "year": "Aug 2019 - Jan 2021",
+      "title": "Public Relations/Android Engineer at PRJKT",
+      "location": "USA (Remote)",
+      "url": "https://prjkt.io"
+    }
+  ],
+  "writing": [
+    {
+      "year": "2026",
+      "title": "Building Native Experiences In Flutter",
+      "meta": "Adding Android-specific features like Material You Dynamic Theming, Share Intents, App Shortcuts and Monochrome App Icons to a Flutter app",
+      "url": "https://ronellsalunke.github.io/blog/2026/04/12/flutter-native-experiences/"
+    }
+  ],
+  "projects": [
+    {
+      "year": "2026",
+      "title": "Bill Splitter Flutter - App to split bills among friends a la SplitWise",
+      "url": "https://github.com/ronellsalunke/bill_splitter_flutter"
+    },
+    {
+      "year": "2025",
+      "title": "Android Build Tool - Configurable CICD solution",
+      "url": "https://github.com/ronellsalunke/flutter-build-tool"
+    },
+    {
+      "year": "2025",
+      "title": "FlutterDex - A basic Pokedex app built with Flutter",
+      "url": "https://github.com/ronellsalunke/flutter_pokedex"
+    },
+    {
+      "year": "2024",
+      "title": "Deepfake Detection API",
+      "url": "https://github.com/ronellsalunke/deepfake-detection-api"
+    },
+    {
+      "year": "2023",
+      "title": "LinkTile - Wear OS tile app displaying a QR code of my LinkedIn profile",
+      "url": "https://github.com/ronellsalunke/LinkTile"
+    }
+  ],
+  "research": [
+    {
+      "year": "2025",
+      "title": "Machine Learning — Book Recommendation Using KNN",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-96-4136-9_7"
+    },
+    {
+      "year": "2025",
+      "title": "CBF-NLP-Based Hybrid Model for Movie Recommendation System",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-97-8096-9_21"
+    },
+    {
+      "year": "2023",
+      "title": "Prediction Model for Stock using Machine Learning Algorithm",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10270808"
+    }
+  ],
+  "education": [
+    {
+      "year": "2022 - 2024",
+      "title": "MSc. Computer Applications (Data Science) at SICSR",
+      "location": "Pune, India",
+      "url": "https://sicsr.ac.in"
+    },
+    {
+      "year": "2018 - 2021",
+      "title": "BSc. Information Technology at University of Mumbai",
+      "location": "Mumbai, India",
+      "url": "https://mu.ac.in"
+    }
+  ],
+  "contact": [
+    {
+      "label": "Resume",
+      "text": "ronellsalunke.pdf",
+      "url": "https://ronellsalunke.github.io/resume.pdf"
+    },
+    {
+      "label": "Email",
+      "text": "ronell129k@gmail.com",
+      "url": "mailto:ronell129k@gmail.com"
+    },
+    {
+      "label": "GitHub",
+      "text": "ronellsalunke",
+      "url": "https://github.com/ronellsalunke"
+    },
+    {
+      "label": "LinkedIn",
+      "text": "ronellsalunke",
+      "url": "https://linkedin.com/in/ronellsalunke"
+    },
+    {
+      "label": "Telegram",
+      "text": "ronell1292k",
+      "url": "https://t.me/ronell1292k"
+    },
+    {
+      "label": "X",
+      "text": "@ronellsalunke",
+      "url": "https://x.com/ronellsalunke"
+    },
+    {
+      "label": "Blog",
+      "text": "Ronell's Blog",
+      "url": "https://ronellsalunke.github.io/blog"
+    }
+  ]
+}
