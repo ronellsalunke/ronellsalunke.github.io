@@ -10,19 +10,19 @@
   "about": "I build stuff.",
   "work": [
     {
-      "year": "Feb 2025 - Present",
+      "year": "2025 - Now",
       "title": "Consultant at Stetig",
       "location": "Pune, India",
       "url": "https://stetig.in"
     },
     {
-      "year": "Feb 2024 - Mar 2024",
+      "year": "2024 - 2024",
       "title": "Software Engineer (Intern) at S2T",
       "location": "Singapore (Remote)",
       "url": "https://s2t.ai"
     },
     {
-      "year": "Aug 2019 - Jan 2021",
+      "year": "2019 - 2021",
       "title": "Public Relations/Android Engineer at PRJKT",
       "location": "USA (Remote)",
       "url": "https://prjkt.io"
@@ -59,7 +59,7 @@
     },
     {
       "year": "2023",
-      "title": "LinkTile - Wear OS tile app displaying a QR code of my LinkedIn profile",
+      "title": "LinkTile - Wear OS tile displaying a QR code of my LinkedIn profile",
       "url": "https://github.com/ronellsalunke/LinkTile"
     }
   ],
@@ -98,37 +98,38 @@
     {
       "label": "Resume",
       "text": "ronellsalunke.pdf",
-      "url": "https://ronellsalunke.github.io/resume.pdf"
+      "url": "https://ronellsalunke.github.io/resume.pdf",
+      "icon": "resume"
     },
     {
       "label": "Email",
       "text": "ronell129k@gmail.com",
-      "url": "mailto:ronell129k@gmail.com"
+      "url": "mailto:ronell129k@gmail.com",
+      "icon": "email"
     },
     {
       "label": "GitHub",
       "text": "ronellsalunke",
-      "url": "https://github.com/ronellsalunke"
+      "url": "https://github.com/ronellsalunke",
+      "icon": "github"
     },
     {
       "label": "LinkedIn",
       "text": "ronellsalunke",
-      "url": "https://linkedin.com/in/ronellsalunke"
+      "url": "https://linkedin.com/in/ronellsalunke",
+      "icon": "linkedin"
     },
     {
       "label": "Telegram",
       "text": "ronell1292k",
-      "url": "https://t.me/ronell1292k"
-    },
-    {
-      "label": "X",
-      "text": "@ronellsalunke",
-      "url": "https://x.com/ronellsalunke"
+      "url": "https://t.me/ronell1292k",
+      "icon": "telegram"
     },
     {
       "label": "Blog",
       "text": "Ronell's Blog",
-      "url": "https://ronellsalunke.github.io/blog"
+      "url": "https://ronellsalunke.github.io/blog",
+      "icon": "blog"
     }
   ]
 }
