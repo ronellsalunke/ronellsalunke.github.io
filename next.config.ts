@@ -1,0 +1,20 @@
+import type { NextConfig } from 'next';
+import createMDX from '@next/mdx';
+
+const nextConfig: NextConfig = {
+  pageExtensions: ['mdx', 'ts', 'tsx'],
+  // Static export so the site can be hosted on GitHub Pages
+  // or any static host, matching the Hugo setup.
+  output: 'export',
+  trailingSlash: true,
+  // Note: Using the Rust compiler means we cannot use
+  // rehype or remark plugins. If you need them, remove
+  // the `experimental.mdxRs` flag.
+  experimental: {
+    mdxRs: { mdxType: 'gfm' }
+  }
+};
+
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
