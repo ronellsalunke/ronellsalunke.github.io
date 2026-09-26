@@ -9,54 +9,67 @@ type ListItemProps = ComponentPropsWithoutRef<'li'>;
 type AnchorProps = ComponentPropsWithoutRef<'a'>;
 type BlockquoteProps = ComponentPropsWithoutRef<'blockquote'>;
 
+const POST_DATE_FORMAT: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC'
+};
+
+function formatPostDate(isoDate: string) {
+  return new Intl.DateTimeFormat('en-US', POST_DATE_FORMAT).format(
+    new Date(isoDate)
+  );
+}
+
 const components = {
   h1: (props: HeadingProps) => (
     <h1
-      className="font-medium text-[20px] leading-[1.35] tracking-[-0.3px] pt-12 mb-0 text-accent"
+      className="font-medium text-[20px] leading-ui pt-12 mb-0 text-accent"
       {...props}
     />
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-accent font-medium text-[20px] leading-[1.35] tracking-[-0.3px] mt-8 mb-3"
+      className="text-accent font-medium text-[20px] leading-ui mt-8 mb-3"
       {...props}
     />
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="text-accent font-medium text-[16px] leading-[1.35] tracking-[-0.3px] mt-8 mb-3"
+      className="text-accent font-medium text-[16px] leading-ui mt-8 mb-3"
       {...props}
     />
   ),
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
   p: (props: ParagraphProps) => (
     <p
-      className="text-body text-[16px] leading-[1.35] tracking-[-0.3px]"
+      className="text-body text-[16px] leading-body"
       {...props}
     />
   ),
   ol: (props: ListProps) => (
     <ol
-      className="text-body text-[16px] leading-[1.35] list-decimal pl-5 space-y-2"
+      className="text-body text-[16px] leading-body list-decimal pl-5 space-y-2"
       {...props}
     />
   ),
   ul: (props: ListProps) => (
     <ul
-      className="text-body text-[16px] leading-[1.35] list-disc pl-5 space-y-1"
+      className="text-body text-[16px] leading-body list-disc pl-5 space-y-1"
       {...props}
     />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
   em: (props: ComponentPropsWithoutRef<'em'>) => (
-    <em className="font-medium" {...props} />
+    <em className="font-semibold" {...props} />
   ),
   strong: (props: ComponentPropsWithoutRef<'strong'>) => (
-    <strong className="font-medium text-accent" {...props} />
+    <strong className="font-bold text-accent" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      'text-link no-underline hover:text-contrast transition-colors duration-200';
+      'text-link no-underline hover:text-brand transition-colors duration-200';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>
@@ -87,31 +100,19 @@ const components = {
     const codeHTML = highlight(children as string);
     return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
   },
-  Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
-    <table>
-      <thead>
-        <tr>
-          {data.headers.map((header, index) => (
-            <th key={index}>{header}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.rows.map((row, index) => (
-          <tr key={index}>
-            {row.map((cell, cellIndex) => (
-              <td key={cellIndex}>{cell}</td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
       className="ml-[0.075em] border-l-3 border-highlight pl-4 text-sub"
       {...props}
     />
+  ),
+  PostDate: ({ date }: { date: string }) => (
+    <p className="text-sub">
+      <time dateTime={date}>{formatPostDate(date)}</time>
+    </p>
+  ),
+  PostSummary: ({ description }: { description: string }) => (
+    <p className="text-body text-[16px] leading-body">{description}</p>
   ),
 };
 

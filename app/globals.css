@@ -1,27 +1,32 @@
 @import "tailwindcss";
 
 @theme inline {
-    --font-sans: "Open Runde", "SF Pro", ui-sans-serif, system-ui, sans-serif;
+    --font-sans: var(--font-geist), "SF Pro", ui-sans-serif, system-ui, sans-serif;
     --color-background: var(--background);
     --color-accent: var(--accent);
     --color-body: var(--body);
     --color-sub: var(--sub);
     --color-highlight: var(--highlight);
     --color-brand: var(--brand);
-    --color-contrast: var(--contrast);
     --color-link: var(--link);
+    --leading-ui: var(--lh-ui);
+    --leading-body: var(--lh-body);
 }
 
 :root {
     color-scheme: light dark;
-    --background: #f6f6f6;
-    --accent: #0b0b0b;
-    --body: #5a5a5a;
-    --sub: #7c7c7c;
+    /* Line heights: --lh-ui for headings and chrome, --lh-body for prose. */
+    --lh-ui: 1.45;
+    --lh-body: 1.6;
+    --background: #ffffff;
+    /* Opaque sRGB mixes keep text tiers consistent across color schemes. */
+    --accent: var(--contrast);
+    --body: color-mix(in srgb, var(--contrast) 64%, var(--background));
+    --sub: color-mix(in srgb, var(--contrast) 55%, var(--background));
     --highlight: #dadada;
     --brand: #d71921;
     --contrast: #000000;
-    --link: #2d2d2d;
+    --link: color-mix(in srgb, var(--contrast) 75%, var(--background));
     --sh-class: #7aa2f7;
     --sh-sign: #89ddff;
     --sh-string: #9ece6a;
@@ -35,30 +40,23 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #000000;
-        --accent: #e9e9e9;
-        --body: #a2a2a2;
-        --sub: #6e6e6e;
         --highlight: #222222;
         --contrast: #ffffff;
-        --link: #d0d0d0;
+        --brand: color-mix(in srgb, #d71921 85%, var(--contrast));
     }
 }
 
 @layer base {
     html {
-        min-width: 360px;
         scrollbar-gutter: stable;
         background-color: var(--background);
     }
 
     body {
         text-rendering: optimizeLegibility;
-        font-weight: 500;
-        line-height: 1.35;
-        letter-spacing: -0.3px;
+        font-weight: 400;
+        line-height: var(--lh-ui);
         font-synthesis: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
         color: var(--body);
         background-color: var(--background);
     }
@@ -72,17 +70,16 @@
         color: var(--accent);
         font-size: 20px;
         font-weight: 500;
-        line-height: 1.35;
-        letter-spacing: -0.3px;
+        line-height: var(--lh-ui);
     }
 
     p {
         font-size: 16px;
-        line-height: 1.35;
+        line-height: var(--lh-body);
+        text-wrap: pretty;
     }
 
     a {
-        color: inherit;
         text-underline-offset: 2px;
     }
 
@@ -128,8 +125,6 @@
     pre code {
         background-color: transparent;
         padding: 0;
-        border: none;
-        font-size: 14px;
         line-height: 1.5;
     }
 
@@ -138,16 +133,12 @@
     }
 
     code:not(pre code) span {
-        font-weight: 500;
+        font-weight: 400;
         color: #100f0f !important;
     }
 
     @media (prefers-color-scheme: dark) {
         code {
-            font-family: "Menlo", "Monaco", "Courier New", monospace;
-            font-size: 14px;
-            padding: 0.2em 0.4em;
-            border-radius: 0.3em;
             background-color: var(--color-zinc-800);
         }
 
@@ -157,7 +148,7 @@
     }
 
     pre code span {
-        font-weight: 500;
+        font-weight: 400;
     }
 
     hr {
@@ -169,35 +160,30 @@
             color: #282726;
         }
     }
-
-    /* Remove Safari input shadow on mobile */
-    input[type="text"],
-    input[type="email"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
-
-    table {
-        display: block;
-        max-width: fit-content;
-        overflow-x: auto;
-        white-space: nowrap;
-        text-align: left;
-    }
 }
 
-/* Homepage links: emphasis color, no underline, contrast hover.
+/* Homepage intro: supporting prose sits one tier lighter than body copy.
+   Unlayered so this beats the text-body utility set by the MDX paragraph
+   component. Dark mode follows --sub, so no media query is needed. */
+.homepage > p {
+    color: var(--sub);
+}
+
+/* Homepage links: emphasis color and brand hover.
    Unlayered so this beats the utilities set by the MDX link component.
-   Dark mode follows --link and --contrast, so no media query is needed. */
+   Dark mode follows --link and --brand, so no media query is needed. */
 .homepage a {
     color: var(--link);
-    text-decoration: none;
     transition-property: color;
     transition-timing-function: var(--default-transition-timing-function);
     transition-duration: var(--default-transition-duration);
 }
 
 .homepage a:hover {
-    color: var(--contrast);
+    color: var(--brand);
+}
+
+/* Distinguish links within prose without relying on color alone. */
+p a {
+    text-decoration-line: underline;
 }
